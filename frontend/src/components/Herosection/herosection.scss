@@ -1,0 +1,41 @@
+@import "../../scss/styleVariables";
+
+.hero-section-cointainer {
+    background-image: url("../../assets/pics/heroBook.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+    transition: ease 1s;
+}
+
+.hero-text {
+    color: $font-alt;
+    width: 90%;
+    text-align: center;
+}
+
+// BREAKPOINTS \\
+.hero-section-cointainer {
+    @include breakpoint(tablet) {
+        background-size: cover;
+        height: 400px;
+        font: {
+            size: $xl;
+        }
+        .btn-login {
+            font: {
+                size: $xl;
+            }
+        }
+    }
+    @include breakpoint(desktop) {
+        height: 600px;
+        font: {
+            size: $xxl;
+        }
+    }
+}

@@ -1,0 +1,72 @@
+@import "../../scss/styleVariables";
+
+.login-form {
+    display: flex;
+    flex-flow: column;
+    .heading-login {
+        font-size: $xxl;
+        font-family: headings-medium;
+        color: $primary;
+    }
+    .formInput {
+        align-self: center;
+        padding: 10px;
+        border-radius: 10px;
+        border: none;
+        margin: 10px;
+        width: 80%;
+        font: {
+            size: $m;
+        }
+    }
+    .buttonContainer {
+        display: flex;
+        justify-content: center;
+        .btn-modal-login {
+            width: 300px;
+            background: $primary;
+            border: none;
+            border-radius: 20px;
+            color: $font-alt;
+            padding: 8px;
+            font: {
+                size: $xl;
+            }
+            cursor: pointer;
+        }
+        margin: 5px 0 10px 0;
+    }
+    .login-text {
+        font-family: text-regular;
+        font-size: $s;
+        .site-links {
+            color: $accent-1;
+            font-family: text-bold;
+        }
+    }
+    .btn-toSignup {
+        background: $accent-2;
+        border: none;
+    }
+    @include breakpoint(tablet) {
+        .heading-login {
+            padding: 10px;
+        }
+        .formInput {
+            padding: 15px;
+            &::placeholder {
+                font: {
+                    size: $l;
+                }
+            }
+        }
+        .buttonContainer {
+            .btn-modal-login {
+                width: 300px;
+                font: {
+                    size: $xl;
+                }
+            }
+        }
+    }
+}

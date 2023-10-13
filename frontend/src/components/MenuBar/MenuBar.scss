@@ -1,0 +1,72 @@
+@import "../../scss/styleVariables";
+.menu-main-container {
+    margin-top: 10rem;
+}
+.menu-container {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: transform 0.3s ease;
+}
+.menu {
+    background: $primary;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    // border-top: 1px solid rgb(141, 141, 141);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    justify-content: center;
+    z-index: 1000;
+    transition: transform 0.3s ease;
+    transform: translateY(0);
+    &.menu-expanded {
+        transform: translateY(0%);
+    }
+    &-item {
+        padding: 10px;
+        border-radius: 50px;
+        transition: 0.3s ease;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        // width: 30px;
+        // height: 30px;
+        .menu-icon {
+            // color: $background;
+            height: 30px;
+            width: 30px;
+        }
+        :hover {
+            color: $accent-1;
+        }
+    }
+    .active {
+        color: $accent-1;
+    }
+    .not-active {
+        color: $background;
+    }
+}
+.menu-item-footer {
+    display: flex;
+    // flex-flow: column;
+    grid-row: 2/3;
+    grid-column: 1 / 6;
+    margin: 10px;
+    justify-content: space-around;
+    .footer-links {
+        font: {
+            family: text-bold;
+        }
+    }
+    :hover {
+        color: $accent-1;
+        text-decoration: underline;
+    }
+    @include breakpoint(tablet) {
+        justify-content: space-evenly;
+    }
+}
