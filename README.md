@@ -11,7 +11,7 @@ Das Projekt wurde als Abschlussprojekt im Rahmen der Full-Stack-Webentwickler-We
 ## 🌐 Live-Demo
 
 🔗 **Website:**
-https://roomtwenty-booknook.vercel.app/
+Projekt nicht mehr deployed
 
 ---
 
